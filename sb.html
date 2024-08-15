@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Redirect</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            text-align: center;
+        }
+        #inputField {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: none;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            outline: none;
+            text-align: center;
+        }
+        #inputField::placeholder {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>&^#</h1>
+        <input type="text" id="inputField" placeholder="...">
+    </div>
+    <script>
+        const redirects = {
+            'sbay': 'https://youtube.com/shorts/phlvT0Vzwko?',
+            '2022-09-13': 'https://yeki463.github.io/sorry/', 
+            '778774763463': 'https://yeki463.github.io/I-W-T-D/'
+        };
+
+        document.getElementById('inputField').addEventListener('input', function() {
+            const input = this.value.toLowerCase();
+            if (redirects[input]) {
+                window.location.href = redirects[input];
+            }
+        });
+    </script>
+</body>
+</html>
